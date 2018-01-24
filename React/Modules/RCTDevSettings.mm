@@ -16,7 +16,11 @@
 #import <jschelpers/JavaScriptCore.h>
 
 #import "RCTBridge+Private.h"
+#if __has_include(<React/RCTAssert.h>)
+#import <React/RCTBridgeModule.h>
+#else
 #import "RCTBridgeModule.h"
+#endif
 #import "RCTEventDispatcher.h"
 #import "RCTJSCSamplingProfiler.h"
 #import "RCTLog.h"

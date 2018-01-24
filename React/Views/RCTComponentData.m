@@ -12,7 +12,11 @@
 #import <objc/message.h>
 
 #import "RCTBridge.h"
+#if __has_include(<React/RCTAssert.h>)
+#import <React/RCTBridgeModule.h>
+#else
 #import "RCTBridgeModule.h"
+#endif
 #import "RCTConvert.h"
 #import "RCTParserUtils.h"
 #import "RCTShadowView.h"
